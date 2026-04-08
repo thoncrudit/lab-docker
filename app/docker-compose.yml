@@ -1,0 +1,14 @@
+version: '3'
+services:
+  back:
+    image: thoncrudit/my-back-image
+    environment:
+      - CURRENT_ENVIRONMENT=development
+    # volumes:
+    #   - ./back-logs:/app/logs
+  front:
+    image: thoncrudit/my-front-image
+    ports:
+      - "8080:80"
+    environment:
+      - WS_BACK_URL=http://back:5000
