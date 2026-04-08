@@ -1,0 +1,1 @@
+docker run -d -p 8080:80 -e WS_BACK_URL=http://172.17.0.1:5000 --name front-container thoncrudit/my-front-image
